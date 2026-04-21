@@ -4,7 +4,7 @@ export const event = {
   milestone: "60th",
   date: "7 June 2026",
   welcomeMessage:
-    "You are warmly invited to celebrate our beloved mother, wife, and Nana as she marks her 60th birthday. We thank God for her beautiful life, her strength, her love, and the joy she brings to everyone around her. Please join us as we gather in love and gratitude to celebrate this special milestone.",
+    "You are warmly invited to celebrate our beloved mother, wife, and grandmother as she marks her 60th birthday. We thank God for her beautiful life, her strength, her love, and the joy she brings to everyone around her. Please join us as we gather in love and gratitude to celebrate this special milestone.",
   bibleVerse: {
     text: "This is the day that the Lord has made; we will rejoice and be glad in it.",
     reference: "Psalm 118:24",
@@ -28,11 +28,11 @@ export const event = {
   registry: {
     wishlistUrl: "https://www.amazon.co.uk/registries/gl/guest-view/1PKVQDDJVC77S?ref_=cm_sw_r_apann_ggr-subnav-share_TVV488D99GP945381WHE&language=en-US",
     bank: {
-      name: "Nationwide",
-      accountName: "Mrs P.O Hamed Matesun",
-      accountNumber: "04217543",
-      sortCode: "07 12 26",
+      name: "[TO BE PROVIDED]",
+      accountName: "[TO BE PROVIDED]",
+      accountNumber: "[TO BE PROVIDED]",
     },
+    voucherEmail: "[TO BE PROVIDED]",
   },
   thankYou: {
     message:
@@ -41,7 +41,7 @@ export const event = {
       text: "The Lord bless you and keep you; the Lord make His face shine upon you and be gracious to you.",
       reference: "Numbers 6:24-26",
     },
-    creditName: "The Matesun family",
+    creditName: "Olatilewa Matesun",
   },
   // Populate after WebP conversion + Supabase upload
   gallery: [   
@@ -52,8 +52,6 @@ export const event = {
   { url: "https://qxoukaosqbtarxdlbwuf.supabase.co/storage/v1/object/public/gallery/05-green-sunglasses.webp", alt: "Yemisi in green aso-ebi" },
   { url: "https://qxoukaosqbtarxdlbwuf.supabase.co/storage/v1/object/public/gallery/06-green-seated.webp", alt: "Yemisi seated in green aso-ebi" },
   { url: "https://qxoukaosqbtarxdlbwuf.supabase.co/storage/v1/object/public/gallery/07-couple-today.webp", alt: "Yemisi with her husband" },
-  { url: "https://qxoukaosqbtarxdlbwuf.supabase.co/storage/v1/object/public/gallery/WhatsApp%20Image%202026-04-21%20at%2012.08.59.jpeg", alt: "Yemisi with her children" },
-  { url: "https://qxoukaosqbtarxdlbwuf.supabase.co/storage/v1/object/public/gallery/WhatsApp%20Image%202026-04-21%20at%2012.11.19.jpeg", alt: "Yemisi with her grandchildren" },
   ] as { url: string; alt: string }[],
   rsvpDeadline: "24 May 2026",
 };

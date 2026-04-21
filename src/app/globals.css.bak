@@ -11,7 +11,7 @@
     -moz-osx-font-smoothing: grayscale;
   }
   h1, h2, h3, h4 { font-family: var(--font-cormorant), serif; color: #f9f3e3; }
-  .script { font-family: var(--font-italiana), serif; color: #d4af37; line-height: 1.1; font-weight: 400; letter-spacing: 0.01em; }
+  .script { font-family: var(--font-great-vibes), cursive; color: #d4af37; line-height: 1; }
   .serif { font-family: var(--font-cormorant), serif; }
 }
 @layer utilities {

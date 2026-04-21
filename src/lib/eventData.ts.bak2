@@ -28,11 +28,11 @@ export const event = {
   registry: {
     wishlistUrl: "https://www.amazon.co.uk/registries/gl/guest-view/1PKVQDDJVC77S?ref_=cm_sw_r_apann_ggr-subnav-share_TVV488D99GP945381WHE&language=en-US",
     bank: {
-      name: "Nationwide",
-      accountName: "Mrs P.O Hamed Matesun",
-      accountNumber: "04217543",
-      sortCode: "07 12 26",
+      name: "[TO BE PROVIDED]",
+      accountName: "[TO BE PROVIDED]",
+      accountNumber: "[TO BE PROVIDED]",
     },
+    voucherEmail: "[TO BE PROVIDED]",
   },
   thankYou: {
     message:
