@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Great+Vibes&family=Inter:wght@300;400;500&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,15 +6,14 @@
   html, body {
     background-color: #5d3720;
     color: #f9f3e3;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-inter), sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; color: #f9f3e3; }
-  .script { font-family: 'Great Vibes', cursive; color: #d4af37; line-height: 1; }
-  .serif { font-family: 'Cormorant Garamond', serif; }
+  h1, h2, h3, h4 { font-family: var(--font-cormorant), serif; color: #f9f3e3; }
+  .script { font-family: var(--font-great-vibes), cursive; color: #d4af37; line-height: 1; }
+  .serif { font-family: var(--font-cormorant), serif; }
 }
-
 @layer utilities {
   .texture-grain {
     background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.03) 1px, transparent 0);
@@ -30,4 +27,70 @@
     background: linear-gradient(to right, transparent, #d4af37, transparent);
     margin: 1.5rem auto;
   }
+  .gold-shimmer {
+    background: linear-gradient(90deg, #d4af37 0%, #f4d77a 25%, #d4af37 50%, #f4d77a 75%, #d4af37 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 4s linear infinite;
+  }
+}
+
+/* Petal fall animation */
+@keyframes petal-fall {
+  0% {
+    transform: translateY(-10vh) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% { opacity: 0.8; }
+  90% { opacity: 0.5; }
+  100% {
+    transform: translateY(110vh) translateX(var(--drift, 0px)) rotate(720deg);
+    opacity: 0;
+  }
+}
+.petal-fall {
+  animation-name: petal-fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* Shimmer */
+@keyframes shimmer {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+/* Embla carousel styles */
+.embla { overflow: hidden; }
+.embla__container { display: flex; }
+.embla__slide {
+  flex: 0 0 80%;
+  min-width: 0;
+  padding: 0 0.5rem;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  transform: scale(0.85);
+  opacity: 0.5;
+}
+.embla__slide.is-selected {
+  transform: scale(1);
+  opacity: 1;
+}
+@media (min-width: 768px) {
+  .embla__slide { flex: 0 0 50%; }
+}
+@media (min-width: 1024px) {
+  .embla__slide { flex: 0 0 40%; }
+}
+
+/* Fade-up on scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }

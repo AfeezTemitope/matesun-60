@@ -1,11 +1,14 @@
 'use client';
+import { motion } from 'framer-motion';
 import { event } from "@/lib/eventData";
 import { Gift, CreditCard, Mail, Copy, Check } from "lucide-react";
 import { useState } from "react";
+import FloralCorner from "@/components/shared/FloralCorner";
 
 export default function GiftRegistry() {
   return (
-    <section className="py-20 px-6 max-w-4xl mx-auto">
+    <section className="py-20 px-6 max-w-4xl mx-auto relative">
+      <FloralCorner position="top-left" className="opacity-40" />
       <h2 className="script text-5xl text-center mb-2">Gift Registry</h2>
       <div className="gold-divider" />
       <p className="text-center serif italic text-cream-200/80 mb-12 mt-6 max-w-lg mx-auto">
@@ -13,6 +16,7 @@ export default function GiftRegistry() {
       </p>
       <div className="grid md:grid-cols-3 gap-6">
         <RegistryCard
+          index={0}
           icon={<Gift className="w-8 h-8 text-gold-400" />}
           title="Amazon Wishlist"
           action={
@@ -22,8 +26,9 @@ export default function GiftRegistry() {
             </a>
           }
         />
-        <BankCard bank={event.registry.bank} />
+        <BankCard bank={event.registry.bank} index={1} />
         <RegistryCard
+          index={2}
           icon={<Mail className="w-8 h-8 text-gold-400" />}
           title="Vouchers"
           action={<p className="text-sm text-cream-100 mt-4 break-all">{event.registry.voucherEmail}</p>}
@@ -33,17 +38,25 @@ export default function GiftRegistry() {
   );
 }
 
-function RegistryCard({ icon, title, action }: { icon: React.ReactNode; title: string; action: React.ReactNode; }) {
+function RegistryCard({ index, icon, title, action }: {
+  index: number; icon: React.ReactNode; title: string; action: React.ReactNode;
+}) {
   return (
-    <div className="border border-gold-400/30 rounded-2xl p-6 text-center bg-chocolate-800/30">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.7, delay: index * 0.15 }}
+      className="border border-gold-400/30 rounded-2xl p-6 text-center bg-chocolate-800/30 hover:border-gold-400/60 transition-colors"
+    >
       <div className="flex justify-center mb-4">{icon}</div>
       <h3 className="serif text-xl mb-2">{title}</h3>
       {action}
-    </div>
+    </motion.div>
   );
 }
 
-function BankCard({ bank }: { bank: typeof event.registry.bank }) {
+function BankCard({ bank, index }: { bank: typeof event.registry.bank; index: number }) {
   const [copied, setCopied] = useState(false);
   const handleCopy = () => {
     navigator.clipboard.writeText(bank.accountNumber);
@@ -51,7 +64,13 @@ function BankCard({ bank }: { bank: typeof event.registry.bank }) {
     setTimeout(() => setCopied(false), 2000);
   };
   return (
-    <div className="border border-gold-400/30 rounded-2xl p-6 text-center bg-chocolate-800/30">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.7, delay: index * 0.15 }}
+      className="border border-gold-400/30 rounded-2xl p-6 text-center bg-chocolate-800/30 hover:border-gold-400/60 transition-colors"
+    >
       <div className="flex justify-center mb-4"><CreditCard className="w-8 h-8 text-gold-400" /></div>
       <h3 className="serif text-xl mb-3">Monetary Gifts</h3>
       <div className="text-sm space-y-1 text-cream-100">
@@ -63,6 +82,6 @@ function BankCard({ bank }: { bank: typeof event.registry.bank }) {
           {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 }

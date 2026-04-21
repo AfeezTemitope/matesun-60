@@ -1,8 +1,19 @@
+'use client';
+import { motion } from 'framer-motion';
 import { event } from "@/lib/eventData";
+import FloralCorner from "@/components/shared/FloralCorner";
 
 export default function ThankYouSection() {
   return (
-    <section className="py-24 px-6 max-w-3xl mx-auto text-center">
+    <motion.section
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 1 }}
+      className="py-24 px-6 max-w-3xl mx-auto text-center relative"
+    >
+      <FloralCorner position="top-left" className="opacity-40" />
+      <FloralCorner position="top-right" className="opacity-40" />
       <h2 className="script text-6xl mb-4">Thank You</h2>
       <div className="gold-divider" />
       <p className="serif text-lg text-cream-100/90 mb-8 leading-relaxed mt-6">
@@ -18,6 +29,6 @@ export default function ThankYouSection() {
         <p className="text-xs tracking-[0.3em] text-cream-200/60 uppercase mb-3">With love from</p>
         <p className="script text-5xl md:text-6xl">{event.thankYou.creditName}</p>
       </div>
-    </section>
+    </motion.section>
   );
 }

@@ -44,8 +44,14 @@ export const event = {
     creditName: "Olatilewa Matesun",
   },
   // Populate after WebP conversion + Supabase upload
-  gallery: [
-    // { url: "https://xxx.supabase.co/storage/v1/object/public/gallery/photo1.webp", alt: "..." },
+  gallery: [   
+  { url: "https://qxoukaosqbtarxdlbwuf.supabase.co/storage/v1/object/public/gallery/01-vintage-solo.webp", alt: "Yemisi in her younger years, white traditional attire" },
+  { url: "https://qxoukaosqbtarxdlbwuf.supabase.co/storage/v1/object/public/gallery/02-vintage-couple.webp", alt: "Yemisi and her husband, early years" },
+  { url: "https://qxoukaosqbtarxdlbwuf.supabase.co/storage/v1/object/public/gallery/03-royal-blue.webp", alt: "Yemisi in royal blue asoke and gele" },
+  { url: "https://qxoukaosqbtarxdlbwuf.supabase.co/storage/v1/object/public/gallery/04-black-teal.webp", alt: "Yemisi in black and teal sequined dress" },
+  { url: "https://qxoukaosqbtarxdlbwuf.supabase.co/storage/v1/object/public/gallery/05-green-sunglasses.webp", alt: "Yemisi in green aso-ebi" },
+  { url: "https://qxoukaosqbtarxdlbwuf.supabase.co/storage/v1/object/public/gallery/06-green-seated.webp", alt: "Yemisi seated in green aso-ebi" },
+  { url: "https://qxoukaosqbtarxdlbwuf.supabase.co/storage/v1/object/public/gallery/07-couple-today.webp", alt: "Yemisi with her husband" },
   ] as { url: string; alt: string }[],
   rsvpDeadline: "24 May 2026",
 };
