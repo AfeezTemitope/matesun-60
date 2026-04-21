@@ -27,7 +27,7 @@ export default function ThankYouSection() {
       </div>
       <div className="mt-12">
         <p className="text-xs tracking-[0.3em] text-cream-200/60 uppercase mb-3">With love, from</p>
-        <p className="script text-5xl md:text-6xl">{event.thankYou.creditName}</p>
+        <p className="text-4xl md:text-5xl" style={{ fontFamily: '"Comic Sans MS", cursive' }}>{event.thankYou.creditName}</p>
       </div>
     </motion.section>
   );

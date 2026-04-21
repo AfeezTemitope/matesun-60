@@ -41,7 +41,7 @@ export const event = {
       text: "The Lord bless you and keep you; the Lord make His face shine upon you and be gracious to you.",
       reference: "Numbers 6:24-26",
     },
-    creditName: "The MATESUN family",
+    creditName: "The Matesun family",
   },
   // Populate after WebP conversion + Supabase upload
   gallery: [   
