@@ -15,7 +15,7 @@ export const event = {
       startTime: "12:00 PM",
       endTime: "2:00 PM",
       venue: "CAC Gospel Generation Church",
-      address: "12-14 Ferndale Rd, Bushwood, London E11 3DN",
+      address: "12-14 Ferndale Rd, Leytonstone, London E11 3DN",
     },
     reception: {
       title: "Reception",
