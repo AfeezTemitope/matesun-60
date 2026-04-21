@@ -46,7 +46,7 @@ export const event = {
   // Populate after WebP conversion + Supabase upload
   gallery: [   
   { url: "https://qxoukaosqbtarxdlbwuf.supabase.co/storage/v1/object/public/gallery/01-vintage-solo.webp", alt: "Yemisi in her younger years, white traditional attire" },
-  { url: "https://qxoukaosqbtarxdlbwuf.supabase.co/storage/v1/object/public/gallery/02-vintage-couple.webp", alt: "Yemisi and her husband, early years" },
+  // { url: "https://qxoukaosqbtarxdlbwuf.supabase.co/storage/v1/object/public/gallery/02-vintage-couple.webp", alt: "Yemisi and her husband, early years" },
   { url: "https://qxoukaosqbtarxdlbwuf.supabase.co/storage/v1/object/public/gallery/03-royal-blue.webp", alt: "Yemisi in royal blue asoke and gele" },
   { url: "https://qxoukaosqbtarxdlbwuf.supabase.co/storage/v1/object/public/gallery/04-black-teal.webp", alt: "Yemisi in black and teal sequined dress" },
   { url: "https://qxoukaosqbtarxdlbwuf.supabase.co/storage/v1/object/public/gallery/05-green-sunglasses.webp", alt: "Yemisi in green aso-ebi" },
@@ -54,6 +54,8 @@ export const event = {
   { url: "https://qxoukaosqbtarxdlbwuf.supabase.co/storage/v1/object/public/gallery/07-couple-today.webp", alt: "Yemisi with her husband" },
   { url: "https://qxoukaosqbtarxdlbwuf.supabase.co/storage/v1/object/public/gallery/WhatsApp%20Image%202026-04-21%20at%2012.08.59.jpeg", alt: "Yemisi with her children" },
   { url: "https://qxoukaosqbtarxdlbwuf.supabase.co/storage/v1/object/public/gallery/WhatsApp%20Image%202026-04-21%20at%2012.11.19.jpeg", alt: "Yemisi with her grandchildren" },
+  { url: "https://qxoukaosqbtarxdlbwuf.supabase.co/storage/v1/object/public/gallery/WhatsApp%20Image%202026-04-21%20at%2012.33.35.jpeg", alt: "Yemisi with her photoshoot"},
+  { url: "https://qxoukaosqbtarxdlbwuf.supabase.co/storage/v1/object/public/gallery/WhatsApp%20Image%202026-04-21%20at%2017.18.16.jpeg", alt: "Yemisi with her photoshoot2"},
   ] as { url: string; alt: string }[],
   rsvpDeadline: "24 May 2026",
 };
